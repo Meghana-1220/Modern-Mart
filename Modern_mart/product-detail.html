@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - ModernMart</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-store"></i>
+                        <span>ModernMart</span>
+                    </a>
+                </div>
+
+                <div class="search-container">
+                    <form class="search-form" id="searchForm">
+                        <input type="text" id="searchInput" placeholder="Search for products, brands and more...">
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <div id="searchSuggestions" class="search-suggestions"></div>
+                </div>
+
+                <nav class="desktop-nav">
+                    <div class="nav-items">
+                        <button id="themeToggle" class="nav-item theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <a href="wishlist.html" class="nav-item">
+                            <i class="fas fa-heart"></i>
+                            <span class="nav-text">Wishlist</span>
+                            <span id="wishlistCount" class="count-badge">0</span>
+                        </a>
+                        <a href="cart.html" class="nav-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="nav-text">Cart</span>
+                            <span id="cartCount" class="count-badge">0</span>
+                        </a>
+                        <a href="profile.html" class="nav-item">
+                            <i class="fas fa-user"></i>
+                            <span class="nav-text">Profile</span>
+                        </a>
+                    </div>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobileNav" class="mobile-nav">
+        <div class="mobile-nav-header">
+            <h3>Menu</h3>
+            <button id="closeMobileNav" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-content">
+            <a href="index.html" class="mobile-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="products.html" class="mobile-nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>Products</span>
+            </a>
+            <a href="wishlist.html" class="mobile-nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Wishlist</span>
+                <span id="mobileWishlistCount" class="count-badge">0</span>
+            </a>
+            <a href="cart.html" class="mobile-nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+                <span id="mobileCartCount" class="count-badge">0</span>
+            </a>
+            <a href="profile.html" class="mobile-nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <button id="mobileThemeToggle" class="mobile-nav-item theme-toggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main product-detail-main">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html">Products</a>
+                <span>/</span>
+                <span id="productBreadcrumb">Product</span>
+            </nav>
+
+            <!-- Product Detail -->
+            <div class="product-detail" id="productDetail">
+                <!-- Content will be loaded here -->
+            </div>
+
+            <!-- Related Products -->
+            <section class="related-products">
+                <h2>Related Products</h2>
+                <div class="products-grid" id="relatedProducts">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About ModernMart</h3>
+                    <p>Your trusted online shopping destination with millions of products at unbeatable prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>My Account</h3>
+                    <ul>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="#">Track Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="products.html?category=electronics">Electronics</a></li>
+                        <li><a href="products.html?category=fashion">Fashion</a></li>
+                        <li><a href="products.html?category=home">Home & Kitchen</a></li>
+                        <li><a href="products.html?category=books">Books</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ModernMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox -->
+    <div id="imageLightbox" class="image-lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-nav">
+                <button id="lightboxPrev" class="lightbox-nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="lightboxNext" class="lightbox-nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/product-detail.js"></script>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernMart - Your Ultimate Shopping Destination</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-store"></i>
+                        <span>ModernMart</span>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <form class="search-form" id="searchForm">
+                        <input type="text" id="searchInput" placeholder="Search for products, brands and more...">
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <div id="searchSuggestions" class="search-suggestions"></div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <div class="nav-items">
+                        <button id="themeToggle" class="nav-item theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <a href="wishlist.html" class="nav-item">
+                            <i class="fas fa-heart"></i>
+                            <span class="nav-text">Wishlist</span>
+                            <span id="wishlistCount" class="count-badge">0</span>
+                        </a>
+                        <a href="cart.html" class="nav-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="nav-text">Cart</span>
+                            <span id="cartCount" class="count-badge">0</span>
+                        </a>
+                        <a href="profile.html" class="nav-item">
+                            <i class="fas fa-user"></i>
+                            <span class="nav-text">Profile</span>
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobileNav" class="mobile-nav">
+        <div class="mobile-nav-header">
+            <h3>Menu</h3>
+            <button id="closeMobileNav" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-content">
+            <a href="index.html" class="mobile-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="products.html" class="mobile-nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>Products</span>
+            </a>
+            <a href="wishlist.html" class="mobile-nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Wishlist</span>
+                <span id="mobileWishlistCount" class="count-badge">0</span>
+            </a>
+            <a href="cart.html" class="mobile-nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+                <span id="mobileCartCount" class="count-badge">0</span>
+            </a>
+            <a href="profile.html" class="mobile-nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <button id="mobileThemeToggle" class="mobile-nav-item theme-toggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="hero-slide active">
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <h1>Mega Electronics Sale</h1>
+                                <p>Up to 70% off on latest smartphones, laptops & more</p>
+                                <a href="products.html?category=electronics" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div>
+                </div>
+                <div class="hero-slide">
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <h1>Fashion Week Special</h1>
+                                <p>Trending styles for men & women at unbeatable prices</p>
+                                <a href="products.html?category=fashion" class="btn btn-primary">Explore Collection</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div>
+                </div>
+                <div class="hero-slide">
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <h1>Home & Kitchen</h1>
+                                <p>Transform your space with premium furniture & appliances</p>
+                                <a href="products.html?category=home" class="btn btn-primary">Shop Home</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div>
+                </div>
+            </div>
+            <div class="hero-indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="categories-grid" id="categoriesGrid">
+                    <!-- Categories will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Deals Section -->
+        <section class="deals-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Deals of the Day</h2>
+                    <a href="products.html?deals=true" class="view-all-btn">View All Deals</a>
+                </div>
+                <div class="products-grid" id="dealsGrid">
+                    <!-- Deal products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Products</h2>
+                    <a href="products.html" class="view-all-btn">View All Products</a>
+                </div>
+                <div class="products-grid" id="featuredGrid">
+                    <!-- Featured products will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About ModernMart</h3>
+                    <p>Your trusted online shopping destination with millions of products at unbeatable prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>My Account</h3>
+                    <ul>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="#">Track Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="products.html?category=electronics">Electronics</a></li>
+                        <li><a href="products.html?category=fashion">Fashion</a></li>
+                        <li><a href="products.html?category=home">Home & Kitchen</a></li>
+                        <li><a href="products.html?category=books">Books</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ModernMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
